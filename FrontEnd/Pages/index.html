@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birth & Death Registration for Banaskantha</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/DocuHub/FrontEnd/Styles/style.css" />
+  </head>
+  <body>
+    <script
+      type="text/javascript"
+      src="/DocuHub/FrontEnd/Pages/script.js"
+    ></script>
+
+    <div id="header">
+      <a id="logo" href="#">Docuhub</a>
+    </div>
+
+    <div class="navbar">
+      <!-- options -->
+      <a href="#">Home</a>
+      <a href="http://127.0.0.1:5500/signup.html">Sign up</a>
+      <a href="#">Certificate Download</a>
+      <a href="#">About us</a>
+      <a href="#">Services</a>
+      <a href="#">Contact us</a>
+
+      <div class="nav-search">
+        <select class="search-select">
+          <option>All</option>
+        </select>
+        <input placeholder="Search here" class="search-input" />
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- images section -->
+    <main>
+      <div class="container">
+        <div class="box1">
+          <img src="img1.jpeg" />
+        </div>
+        <div class="box2">
+          <img src="img2.jpeg" />
+        </div>
+        <div class="img3">
+          <img src="img3.jpeg" />
+        </div>
+      </div>
+
+      <!-- beneath photos -->
+      <div class="home-icon">
+        <i class="fa-solid fa-house"></i>
+        <p>Online Services |</p>
+        <h5 style="color: black">Birth/Death Search</h5>
+      </div>
+
+      <div class="container1">
+        <!-- left drop-down list -->
+        <div class="dropdown">
+          <a href="#" target="_blank">Birth/Death</a>
+          <a href="#">Apply for Birth/Death Certificate</a>
+          <a href="#">Hospital Registration (C Form)</a>
+        </div>
+
+        <!-- right registration search -->
+        <div class="regi-search">
+          <h1>Registration Search</h1>
+        </div>
+        <form>
+          <div class="left-sec">
+            <!-- <fieldset> -->
+            <span class="details">Registration Type: </span>
+            <input
+              type="radio"
+              id="birth"
+              name="registrationType"
+              value="birth"
+            />
+            <label for="birth">Birth</label>
+            <input
+              type="radio"
+              id="death"
+              name="registrationType"
+              value="death"
+            />
+            <label for="death">Death</label>
+            <!-- </fieldset> -->
+
+            <div class="input-box">
+              <span class="details">Registration No.: </span>
+              <input type="text" placeholder="registration no." />
+            </div>
+
+            <div class="input-box">
+              <span class="details">Zone: </span>
+              <select name="zone">
+                <option>--Select--</option>
+                <option>CENTRAL</option>
+                <option>EAST</option>
+                <option>NORTH</option>
+                <option>SOUTH</option>
+                <option>WEST</option>
+              </select>
+            </div>
+
+            <div class="gender-details">
+              <span class="gender-title">Gender:</span>
+              <input type="radio" id="male" name="gender" value="male" />
+              <label for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+              <input type="radio" id="other" name="gender" value="other" />
+              <label for="other">Other</label>
+            </div>
+
+            <span class="fathername">Fathername: </span>
+            <input type="text" placeholder="fathername" />
+
+            <!-- custom input date -->
+            <div class="input-date">
+              <span class="text">From Birth Date<br />(mm/dd/yyyy):</span>
+              <input type="date" name="" id="" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: white;
+  color: black; /* Set default text color for body */
+}
+
+.navbar {
+  height: 60px;
+  background-color: crimson;
+  border: 2px rgb(221, 217, 217);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  color: #ff0a54;
+  font-size: 60px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  background-color: crimson;
+  margin-right: 150px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+/* navbar hover pop-up links */
+.navbar a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+  color: beige;
+}
+
+#header {
+  padding: 2px;
+  background-color: white;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .img5 {
+    height: 30px;
+    width: 30px;
+    margin-left: 1200px;
+    object-fit: cover;
+} */
+
+.img4 {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.slogan {
+  color: solid black;
+  margin-right: 1150px;
+  white-space: nowrap;
+}
+
+.nav-search {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(0, 0, 98);
+  width: 620px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.search-select {
+  background-color: #d4ddff;
+  width: 50px;
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border: none;
+}
+
+.search-input {
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+}
+
+.search-icon {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: black;
+  background-color: rgb(0, 6, 81);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/*.nav-search:hover{
+    border: 2px solid orange ;
+}*/
+
+/* main body */
+/* image sec */
+.container {
+  width: 80%;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: crimson;
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+.box1 {
+  background-color: red;
+  height: 50px;
+}
+
+/* left-beneath photo dropdown list */
+.home-icon {
+  color: crimson;
+  display: flex;
+  margin-left: 200px;
+}
+
+.dropdown a {
+  display: flex;
+  background-color: crimson;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  transition: all 5 ease;
+  height: 30px;
+  width: 18%;
+  margin-left: 200px;
+}
+
+.dropdown a:hover {
+  background-color: beige;
+  color: black;
+  transition: 0.3s;
+}
+
+/* inputdate calender */
+input[type="date"] {
+  position: relative;
+  width: 200px;
+  height: 20px;
+  padding-left: 10px;
+  border: 2px solid black;
+  border-radius: none;
+  font-size: 15px;
+  font-weight: 400px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
