@@ -1,0 +1,222 @@
+/* Google Fonts - Inter for a modern look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Define CSS Variables for easy theme management */
+:root {
+  --primary-color: #3498db; /* A vibrant blue, similar to the image */
+  --text-color: #333;
+  --light-bg: #f0f2f5; /* Soft background for the page */
+  --form-bg: #ffffff; /* White background for the form container */
+  --border-color: #dcdcdc; /* Light border for inputs */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 700px; /* Max width for the form */
+  width: 90%; /* Responsive width */
+  background-color: var(--form-bg);
+  padding: 2.5rem 2rem; /* Increased padding for spacious feel */
+  border-radius: 15px; /* More rounded corners, like the image */
+  box-shadow: 0 10px 25px var(--shadow-medium); /* Deeper shadow */
+  margin: 2rem 0; /* Add some vertical margin for smaller screens */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container .title {
+  font-size: 2.2rem; /* Larger title */
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem; /* More space below title */
+  position: relative;
+}
+
+.container form .user-details {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid for inputs */
+  gap: 1.5rem; /* Space between grid items */
+  margin-bottom: 1.5rem;
+}
+
+.container form .user-details .input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.container form .user-details .input-box .details {
+  font-weight: 600;
+  margin-bottom: 0.6rem; /* Space between label and input */
+  color: #555; /* Slightly darker text for labels */
+}
+
+.container form .user-details .input-box input {
+  height: 45px; /* Fixed height for inputs */
+  width: 100%;
+  padding: 0 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px; /* Rounded input fields */
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+.container form .user-details .input-box input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2); /* Subtle focus ring */
+}
+
+.container form .gender-details {
+  margin-bottom: 2rem;
+}
+
+.container form .gender-details .gender-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #555;
+  display: block; /* Ensure it takes full width */
+}
+
+.container form .gender-details .category {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 1.5rem; /* Space between gender options */
+}
+
+.container form .gender-details .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Custom radio button styling (optional, but enhances look) */
+.container form .gender-details .category label input[type='radio'] {
+  -webkit-appearance: none; /* Hide default radio button */
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.container form .gender-details .category label input[type='radio']:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.container
+  form
+  .gender-details
+  .category
+  label
+  input[type='radio']:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--form-bg); /* Inner dot color */
+}
+
+/* IMPORTANT: Updated this selector to target the span with text */
+.container form .gender-details .category label .gender-text {
+  /* No specific styles needed here, just ensuring the selector is correct */
+}
+
+/* Submit Button */
+.container form .button {
+  text-align: center; /* Center the button */
+}
+
+.container form .button input[type='submit'] {
+  height: 50px;
+  width: 100%;
+  max-width: 200px; /* Max width for the button */
+  border-radius: 8px; /* Rounded button */
+  border: none;
+  color: #fff;
+  font-size: 1.2rem; /* Larger font size */
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    #2980b9
+  ); /* Gradient background */
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.container form .button input[type='submit']:hover {
+  background: linear-gradient(
+    135deg,
+    #2980b9,
+    var(--primary-color)
+  ); /* Reverse gradient on hover */
+  transform: translateY(-3px); /* Subtle lift effect */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .container .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .container form .user-details {
+    grid-template-columns: 1fr; /* Stack inputs vertically on small screens */
+    gap: 1rem;
+  }
+  .container form .button input[type='submit'] {
+    max-width: 100%; /* Button takes full width on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem 1rem;
+  }
+  .container .title {
+    font-size: 1.6rem;
+  }
+  .container form .gender-details .category {
+    flex-direction: column; /* Stack gender options */
+    gap: 0.8rem;
+  }
+}

@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birth & Death Registration for Banaskantha</title>
+    <title>DocuHub - Banaskantha Citizens' Official Portal</title>
+    <link rel="stylesheet" href="../Styles/style.css" />
     <link
       rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="/DocuHub/FrontEnd/Styles/style.css" />
   </head>
@@ -16,120 +17,193 @@
       src="/DocuHub/FrontEnd/Pages/script.js"
     ></script>
 
-    <div id="header">
-      <a id="logo" href="#">Docuhub</a>
-    </div>
+    <header id="header">
+      <a id="logo" href="#">DocuHub <i class="fas fa-file-alt"></i></a>
+      <div>
+        <a href="http://127.0.0.1:5500/signup.html" class="navbar-link"
+          ><i class="fas fa-user-plus"></i> Sign Up</a
+        >
+      </div>
+    </header>
 
-    <div class="navbar">
-      <!-- options -->
-      <a href="#">Home</a>
-      <a href="http://127.0.0.1:5500/signup.html">Sign up</a>
-      <a href="#">Certificate Download</a>
-      <a href="#">About us</a>
-      <a href="#">Services</a>
-      <a href="#">Contact us</a>
+    <nav class="navbar">
+      <a href="#"><i class="fas fa-home"></i> Home</a>
+      <a href="http://127.0.0.1:5500/signup.html"
+        ><i class="fas fa-user-plus"></i> Sign Up</a
+      >
+      <a href="#"><i class="fas fa-download"></i> Certificate Download</a>
+      <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+      <a href="#"><i class="fas fa-concierge-bell"></i> Services</a>
+      <a href="#"><i class="fas fa-headset"></i> Contact Us</a>
 
       <div class="nav-search">
-        <select class="search-select">
-          <option>All</option>
+        <select class="search-select" aria-label="Select search category">
+          <option>All Categories</option>
+          <option>Birth Certificates</option>
+          <option>Death Certificates</option>
+          <option>Forms</option>
         </select>
-        <input placeholder="Search here" class="search-input" />
+        <input
+          placeholder="Search Banaskantha's DocuHub"
+          class="search-input"
+          aria-label="Search input"
+        />
         <div class="search-icon">
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <!-- images section -->
     <main>
-      <div class="container">
-        <div class="box1">
-          <img src="img1.jpeg" />
+      <section class="hero-section">
+        <div class="hero-card">
+          <img src="img1.jpeg" alt="Family celebrating birth" />
+          <h3>Birth Certificates</h3>
+          <p>Register new births and obtain official certificates easily.</p>
         </div>
-        <div class="box2">
-          <img src="img2.jpeg" />
+        <div class="hero-card">
+          <img src="img2.jpeg" alt="Memorial flowers" />
+          <h3>Death Certificates</h3>
+          <p>
+            Streamlined process for death registration and certificate issuance.
+          </p>
         </div>
-        <div class="img3">
-          <img src="img3.jpeg" />
+        <div class="hero-card">
+          <img src="img3.jpeg" alt="Official documents" />
+          <h3>Online Services</h3>
+          <p>
+            Access various government services from the comfort of your home.
+          </p>
         </div>
-      </div>
+      </section>
 
-      <!-- beneath photos -->
-      <div class="home-icon">
+      <div class="home-breadcrumb">
         <i class="fa-solid fa-house"></i>
         <p>Online Services |</p>
         <h5 style="color: black">Birth/Death Search</h5>
       </div>
 
-      <div class="container1">
-        <!-- left drop-down list -->
-        <div class="dropdown">
-          <a href="#" target="_blank">Birth/Death</a>
-          <a href="#">Apply for Birth/Death Certificate</a>
-          <a href="#">Hospital Registration (C Form)</a>
-        </div>
+      <div class="content-area">
+        <aside class="sidebar">
+          <h2>Quick Links</h2>
+          <a href="#" target="_blank"
+            ><i class="fas fa-baby"></i> Birth Registration</a
+          >
+          <a href="#" target="_blank"
+            ><i class="fas fa-cross"></i> Death Registration</a
+          >
+          <a href="#"><i class="fas fa-file-alt"></i> Apply for Certificate</a>
+          <a href="#"
+            ><i class="fas fa-hospital"></i> Hospital Registration (C Form)</a
+          >
+          <a href="#"><i class="fas fa-question-circle"></i> FAQs</a>
+        </aside>
 
-        <!-- right registration search -->
-        <div class="regi-search">
+        <section class="registration-form-section">
           <h1>Registration Search</h1>
-        </div>
-        <form>
-          <div class="left-sec">
-            <!-- <fieldset> -->
-            <span class="details">Registration Type: </span>
-            <input
-              type="radio"
-              id="birth"
-              name="registrationType"
-              value="birth"
-            />
-            <label for="birth">Birth</label>
-            <input
-              type="radio"
-              id="death"
-              name="registrationType"
-              value="death"
-            />
-            <label for="death">Death</label>
-            <!-- </fieldset> -->
+          <form>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Registration Type:</label>
+                <div class="radio-group">
+                  <label for="birth">
+                    <input
+                      type="radio"
+                      id="birth"
+                      name="registrationType"
+                      value="birth"
+                      checked
+                    />
+                    Birth
+                  </label>
+                  <label for="death">
+                    <input
+                      type="radio"
+                      id="death"
+                      name="registrationType"
+                      value="death"
+                    />
+                    Death
+                  </label>
+                </div>
+              </div>
 
-            <div class="input-box">
-              <span class="details">Registration No.: </span>
-              <input type="text" placeholder="registration no." />
+              <div class="form-group">
+                <label for="regNo">Registration No.:</label>
+                <input
+                  type="text"
+                  id="regNo"
+                  placeholder="Enter registration number"
+                  aria-label="Registration Number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="zoneSelect">Zone:</label>
+                <select id="zoneSelect" name="zone" aria-label="Select Zone">
+                  <option value="">-- Select Zone --</option>
+                  <option value="CENTRAL">CENTRAL</option>
+                  <option value="EAST">EAST</option>
+                  <option value="NORTH">NORTH</option>
+                  <option value="SOUTH">SOUTH</option>
+                  <option value="WEST">WEST</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                  <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" />
+                    Male
+                  </label>
+                  <label for="female">
+                    <input
+                      type="radio"
+                      id="female"
+                      name="gender"
+                      value="female"
+                    />
+                    Female
+                  </label>
+                  <label for="other">
+                    <input
+                      type="radio"
+                      id="other"
+                      name="gender"
+                      value="other"
+                    />
+                    Other
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="fatherName">Father's Name:</label>
+                <input
+                  type="text"
+                  id="fatherName"
+                  placeholder="Enter father's name"
+                  aria-label="Father's Name"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="fromDate">From Date (mm/dd/yyyy):</label>
+                <input type="date" id="fromDate" aria-label="From Date" />
+              </div>
             </div>
 
-            <div class="input-box">
-              <span class="details">Zone: </span>
-              <select name="zone">
-                <option>--Select--</option>
-                <option>CENTRAL</option>
-                <option>EAST</option>
-                <option>NORTH</option>
-                <option>SOUTH</option>
-                <option>WEST</option>
-              </select>
+            <div class="button-group">
+              <button type="submit">
+                <i class="fas fa-search"></i> Search
+              </button>
+              <button type="reset" class="clear">
+                <i class="fas fa-eraser"></i> Clear
+              </button>
             </div>
-
-            <div class="gender-details">
-              <span class="gender-title">Gender:</span>
-              <input type="radio" id="male" name="gender" value="male" />
-              <label for="male">Male</label>
-              <input type="radio" id="female" name="gender" value="female" />
-              <label for="female">Female</label>
-              <input type="radio" id="other" name="gender" value="other" />
-              <label for="other">Other</label>
-            </div>
-
-            <span class="fathername">Fathername: </span>
-            <input type="text" placeholder="fathername" />
-
-            <!-- custom input date -->
-            <div class="input-date">
-              <span class="text">From Birth Date<br />(mm/dd/yyyy):</span>
-              <input type="date" name="" id="" />
-            </div>
-          </div>
-        </form>
+          </form>
+        </section>
       </div>
     </main>
   </body>
