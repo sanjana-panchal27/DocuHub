@@ -38,6 +38,23 @@ body {
 
 #logo:hover {
   transform: scale(1.05);
+  cursor: pointer;
+}
+
+.signup-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.signup-nav a:hover {
+  transform: scale(1.05);
+  transition: calc(2);
+  transition-duration: 0.5s;
+  color: #2980b9;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .navbar {
@@ -62,6 +79,12 @@ body {
 .navbar a:hover {
   background-color: var(--primary-color);
   color: white;
+  transform: scale(1.05);
+  transition: calc(2);
+  transition-duration: 1s;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .nav-search {
